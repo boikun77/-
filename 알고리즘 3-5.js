@@ -12,14 +12,14 @@ function solution(nums) {
     if (frequency.get(a) === frequency.get(b)) {
       return b - a;
     } else if (frequency.get(a) < frequency.get(b)) {
-      return a - b;
-    }
+      return frequency.get(a) - frequency.get(b);
+    } // 사실 이 비교함수가 맞는지 잘 모르겠다 ;;
   });
   return nums;
 }
 
-const nums = [1, 1, 2, 2, 2, 3];
-console.log(solution(nums)); // 출력: [3, 1, 1, 2, 2, 2]
+const nums = [1, 1, 1, 2, 2, 2, 3];
+console.log(solution(nums));
 
 // 알고리즘 3-5 풀이 note :
 
