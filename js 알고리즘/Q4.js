@@ -2,14 +2,14 @@
 // 다음 출력 결과와 같이 동작하도록 addTodo 함수를 완성하라.
 
 let todos = [
-  { id: 3, content: 'HTML', completed: false },
-  { id: 2, content: 'CSS', completed: true },
-  { id: 1, content: 'Javascript', completed: false }
+  { id: 3, content: "HTML", completed: false },
+  { id: 2, content: "CSS", completed: true },
+  { id: 1, content: "Javascript", completed: false },
 ];
 
-const addTodo = (todos,content) => [...todos, content];
+const addTodo = (todos, content) => [...todos, content];
 
-todos = addTodo(todos, { id: 4, content: 'Test', completed: false });
+todos = addTodo(todos, { id: 4, content: "Test", completed: false });
 console.log(todos);
 /*
   [

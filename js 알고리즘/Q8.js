@@ -26,7 +26,7 @@ const todos = [
 // const countCompletedTodos = (todos) =>
 //   todos.filter(({ completed }) => completed === true).length;
 
-const countCompletedTodos = (todos) =>
-  todos.filter(({ completed }) => completed).length;
+// const countCompletedTodos = (todos) =>
+//   todos.filter(({ completed }) => completed).length;
 
 console.log(countCompletedTodos(todos)); // 1
