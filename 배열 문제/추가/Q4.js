@@ -5,6 +5,6 @@ const winner = (votes) => {
     (acc, cur) => ({ ...acc, [cur]: (acc[cur] || 0) + 1 }),
     {}
   );
-  return result;
+  return Object.keys(result).reduce((a, b) => (result[a] > result[b] ? a : b)); // 왜 reduce?
 };
 console.log(winner(votes)); // 'Alice'
