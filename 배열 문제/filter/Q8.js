@@ -3,5 +3,5 @@ const users = [
   { name: "Tom", activated: false },
   { name: "Jane", activated: true },
 ];
-const activeUsers = (users) => users.filter((user) => user.activated === true);
+const activeUsers = (users) => users.filter((user) => user.activated);
 console.log(activeUsers(users)); // [{ name: 'Jane', activated: true }]

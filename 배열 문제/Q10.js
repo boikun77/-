@@ -6,9 +6,15 @@ const todos = [
   { id: 1, content: "Javascript", completed: false },
 ];
 
-const isAllCompleted = (todos) => {
-  const result = todos.filter((todo) => todo.completed == true);
-  return result.length === todos.length ? true : false;
-};
+// const isAllCompleted = (todos) =>
+//   todos.filter((todo) => todo.completed == true).length === todos.length
+//     ? true
+//     : false;
+
+// const isAllCompleted = (todos) =>
+//   todos.filter((todo) => todo.completed == true).length === todos.length;
+
+// const isAllCompleted = (todos) =>
+//   !!todos.filter((todo) => todo.completed == true).length;
 
 console.log(isAllCompleted(todos));

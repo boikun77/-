@@ -7,4 +7,19 @@ const winner = (votes) => {
   );
   return Object.keys(result).reduce((a, b) => (result[a] > result[b] ? a : b)); // 왜 reduce?
 };
+
+// Object의 key, value만 뽑을때
+// entries ([key, value])
+
+const winner = (votes) =>
+  Object.entries(
+    votes.reduce((acc, vote) => ({ ...acc, [vote]: (acc[vote] || 0) + 1 }), {})
+  ).reduce(
+    (acc, [name, count]) => (acc.count > count ? acc : { name, count }),
+    { name: "", count: 0 }
+  ).name;
+
 console.log(winner(votes)); // 'Alice'
+
+// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/entries

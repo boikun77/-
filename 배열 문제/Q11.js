@@ -6,9 +6,5 @@ const todos = [
   { id: 1, content: "Javascript", completed: false },
 ];
 
-const hasItemById = (id) => {
-  const result = todos.map((todo) => todo.id);
-  return result.includes(id) ? true : false;
-};
-
+const hasItemById = (id) => todos.map((todo) => todo.id).includes(id);
 console.log(hasItemById(1)); // true

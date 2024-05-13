@@ -9,6 +9,10 @@ let todos = [
 const toggleCompletedAll = (todos) =>
   todos.map((todo) => ({ ...todo, completed: true })); // 객체 리터럴을 사용시 중괄호가 함수의 중괄호와 충돌하기 떄문에 명시적으로 리턴문을 써주거나 괄호로 묶어주어야 한다.
 
+// () => {}
+// () =>
+// () => ({})
+
 todos = toggleCompletedAll(todos);
 console.log(todos);
 /*

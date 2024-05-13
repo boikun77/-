@@ -4,5 +4,5 @@ const products = [
   { name: "Phone", price: 500 },
 ];
 const totalPrice = (products) =>
-  products.reduce((acc, cur) => acc + cur.price, 0);
+  products.reduce((acc, product) => acc + product.price, 0);
 console.log(totalPrice(products)); // 1500

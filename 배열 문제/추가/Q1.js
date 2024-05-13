@@ -8,4 +8,12 @@ const sortAndRepeatNames = (users) => {
   return nameLength.flatMap((user) => Array(user.name.length).fill(user.name)); // === nameLength.map((user) => Array(user.name.length).fill(user.name)).flat();
 };
 
+const sortAndRepeatNames = (users) =>
+  users
+    .map(({ name }) => name)
+    .sort((a, b) => a.length - b.length)
+    .reduce((acc, name) => [...acc, ...Array(name.length).fill(name)], []);
+
 console.log(sortAndRepeatNames(users)); // ['Tom', 'Tom', 'Tom', 'Bob', 'Bob', 'Bob', 'Alexander', 'Alexander', 'Alexander', 'Alexander', 'Alexander', 'Alexander', 'Alexander', 'Alexander', 'Alexander']
+
+// map filter reduce

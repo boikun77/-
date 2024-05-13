@@ -6,9 +6,12 @@ const todos = [
   { id: 1, content: "Javascript", completed: false },
 ];
 
-const countCompletedTodos = (todos) => {
-  const result = todos.filter((todo) => todo.completed == true);
-  return result.length;
-};
+// const countCompletedTodos = (todos) => {
+//   const result = todos.filter((todo) => todo.completed == true);
+//   return result.length;
+// };
+
+const countCompletedTodos = (todos) =>
+  todos.filter((todo) => todo.completed == true).length;
 
 console.log(countCompletedTodos(todos)); // 1

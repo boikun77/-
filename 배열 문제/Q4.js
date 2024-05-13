@@ -9,6 +9,8 @@ let todos = [
 
 const addTodo = (todos, element) => [element, ...todos]; // Deep Dive 510p
 
+// ...todos[2], completed: true
+
 todos = addTodo(todos, { id: 4, content: "Test", completed: false });
 console.log(todos);
 /*

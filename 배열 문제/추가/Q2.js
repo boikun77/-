@@ -5,8 +5,9 @@ const products = [
   { name: "Monitor", price: 300 },
   { name: "USB cable", price: 190 },
 ];
-const averageHighPrice = (products) => {
-  const result = products.filter((product) => product.price >= 200);
-  return result.reduce((acc, cur) => acc + cur.price, 0) / result.length;
-};
+const averageHighPrice = (products) =>
+  products
+    .filter((product) => product.price >= 200)
+    .reduce((acc, cur) => acc + cur.price, 0) / result.length;
+
 console.log(averageHighPrice(products)); // 300
