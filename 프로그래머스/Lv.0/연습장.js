@@ -1,1 +1,2 @@
-const solution = (n, k) => {};
+const solution = (n) =>
+  
