@@ -1,2 +1,1 @@
-const solution = (n) =>
-  
+const solution = (a, b, c) => {};
